@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DAtector</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+
+  <!-- Favicons
+    ================================================== -->
+  <link rel="shortcut icon" href="img/logo.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
+
+
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.css">
+  <script src="https://kit.fontawesome.com/726df78ecc.js"></script>
+
+  <!-- Stylesheet
+    ================================================== -->
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <link rel="stylesheet" type="text/css" href="css/nivo-lightbox/nivo-lightbox.css">
+  <link rel="stylesheet" type="text/css" href="css/nivo-lightbox/default.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700,800,900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,800" rel="stylesheet" />
+  <link href="css/main.css" rel="stylesheet" />
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+  <!-- Navigation
+    ==========================================-->
+  <nav id="menu" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+          data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span
+            class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+        <a class="navbar-brand page-scroll" href="#page-top">DAtector</a> </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <% if (!loginStatus) { %>
+      <div class="fix-w-h text">
+        <ul class="drop-down-menu nav navbar-nav navbar-right" style="padding-left: 200px;">
+          <li><a href="/">首頁</a></li>
+          <li><a href="/login">登入</a></li>
+          <li><a href="/register">註冊</a></li>
+        </ul>
+      </div>
+      <% } else { %>
+      <div class="fix-w-h text">
+            <ul class="drop-down-menu nav navbar-nav navbar-right" >
+            <li><a href="/">首頁</a></li>
+            <li><a href="/profile_verification">身分審核</a></li>
+            <li><a href="/asset_verification">作品審核</a></li>
+            <li><a href="/transaction_authorization">授權審核</a></li>
+            <li><a href="/logout">登出</a></li>
+          </ul>
+      </div>
+      <% } %>
+      <!-- /.navbar-collapse -->
+    </div>
+  </nav>
+  <!-- Header -->
+  <header id="header">
+    <div class="intro">
+      <div class="overlay">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-9 col-md-offset-2 intro-text">
+              <h1 style="font-size: 25px;
+              margin-bottom: -15px;
+              padding-bottom: 20px;"><span></span></h1>
+              <h1 style="font-size: 48px;
+              margin-bottom: -15px;
+              padding-bottom: 20px;">
+                DAtector <span></span></h1>
+              <h1 style="text-transform: uppercase; font-size:20px">歡迎使用後台管理系統 <span></span></h1>
+
+              <br>
+              <a href="#features" class="btn btn-custom btn-lg page-scroll">Learn More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- Features Section -->
+  <div id="features" class="text-center txt-fons">
+    <div class="container">
+      <div class="col-md-10 col-md-offset-1 section-title">
+        <h2 style="font-family:Microsoft JhengHei;">我們的服務</h2>
+      </div>
+      <div class="row" style="font-family:Microsoft JhengHei;">
+        <div class="col-xs-6 col-md-4"> <i class="fa fas fa-desktop"></i>
+          <h3>版權監測</h3>
+          <p>平台會使用圖片智能對比的系統，<br>監測是否已有人使用過此作品登記版權。</p>
+        </div>
+
+        <div class="col-xs-6 col-md-4 " style="padding-left: 0px"> <i class="fa fas fa-user-shield"></i>
+          <h3>合法授權</h3>
+          <p>使用者與創作者可直接在平台上溝通，<br>合法獲得自己欣賞作品的使用權。</p>
+        </div>
+        <div class="col-xs-6 col-md-4"><i class="fa fal fa-fist-raised"></i>
+          <h3>版權登記</h3>
+          <p>確認使用者上傳的檔案並未侵權後，<br>會將使用者所上傳的檔案存放置IPFS資料庫，<br>再將IPFS地址存到版權區塊鏈上<br>所存證生成智能合約，不可篡改。</p>
+        </div>
+
+      </div><br><br>
+      <div class="row" style="font-family:Microsoft JhengHei; padding-top:20px">
+        <div class="col-xs-6 col-md-6" style="padding-left: 170px"> <i class=" fa fas fa-handshake"></i>
+          <h3>侵權取證</h3>
+          <p>平台能提供使用者在區塊鏈上的版權證據及相關資料，<br>以便創作者作品被侵權時能夠簡單的取證，<br>證明創作者之清白與維護創作者的智慧財產權。</p>
+        </div>
+
+        <div class="col-xs-6 col-md-4"> <i class="fa far fa-stamp"></i>
+          <h3>版權存證</h3>
+          <p>
+            在登記版權前，依據法律的不同，<br>在攝影圖片及設計圖稿中會先請使用者上傳創作記錄<br>等資料，確保該檔案是使用者本人所創作的；<br>而商標logo則是請使用者提供先使用證明<br>或公開發表日期，來確保是第一個登記此商標的使用者。
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--web work in-->
+  <div id="procedures" class="container text-center">
+    <div class="row">
+        <h2>網頁操作流程</h2>
+        <img src="img/work.jpg" class=" center" style="width: 640px; height:480px; margin-left:100px " alt="">
+    </div>
+  </div>
+    <!-- About Section -->
+    <div id="about" class="container">
+      <div class="row">
+        <div class="col-xs-12 col-md-6"> <img src="img/indeximg.jpg" class="img-responsive" alt=""> </div>
+        <div class="col-xs-12 col-md-6">
+          <div class="about-text">
+            <h2>About Us</h2>
+            <p>
+              「DAtector」結合照片（Photo）、保護（Protect）與偵測 （Detect） 之義，提供創作者們一個平台，讓創作者可以安心的上傳自己的作品。使用IPFS系統自動攔截相同作品，避免重複登記，並結合區塊鏈技術登記版權，運用其不可篡改、可溯源等特性，固化作品的內容和形成時間，確保作品的真實公正。            </p>
+          </div>
+          <div class="about-text">
+            <h2>CONTACT US</h2>
+            <h3><a href="mailto:support@DAtector.net">support@DAtector.net</a></h3>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- footer -->
+    <div id="footer" class="container-fluid ">
+      <div id="footerwrap-global" class="row">
+        <div class="m-bottom-2">
+          <div class="p-top-3">
+            <span>
+              <a href="/terms" class="p-right-1 text-main">
+                使用條款 </a>
+            </span>
+            |
+            <span>
+              <a href="/privacy" class="p-left-3 p-right-2 text-main">
+                隱私</a>
+            </span>
+          </div>
+          <h6 style="    margin-top: 5px;">
+            © 2019 DAtector. All rights reserved. Written by SiouTing WU & HwaMing Tan.
+          </h6>
+        </div>
+      </div>
+    </div>
+
+
+    <script type="text/javascript" src="js/jquery.1.11.1.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/SmoothScroll.js"></script>
+    <script type="text/javascript" src="js/nivo-lightbox.js"></script>
+    <script type="text/javascript" src="js/jqBootstrapValidation.js"></script>
+    <script type="text/javascript" src="js/contact_me.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+</body>
+
+</html>
